@@ -1,0 +1,640 @@
+/* =======  Preloader Style  ======= */
+.preloader{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Heart */
+  .lds-heart {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    transform: rotate(45deg);
+    transform-origin: 32px 32px;
+  }
+  .lds-heart div {
+    top: 23px;
+    left: 19px;
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background: #b08c3e;
+    animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  .lds-heart div:after,
+  .lds-heart div:before {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 26px;
+    height: 26px;
+    background: #b08c3e;
+  }
+  .lds-heart div:before {
+    left: -17px;
+    border-radius: 50% 0 0 50%;
+  }
+  .lds-heart div:after {
+    top: -17px;
+    border-radius: 50% 50% 0 0;
+  }
+  @keyframes lds-heart {
+    0% {
+      transform: scale(0.95);
+    }
+    5% {
+      transform: scale(1.1);
+    }
+    39% {
+      transform: scale(0.85);
+    }
+    45% {
+      transform: scale(1);
+    }
+    60% {
+      transform: scale(0.95);
+    }
+    100% {
+      transform: scale(0.9);
+    }
+  }
+  
+
+@font-face {
+    font-family: "New York Post";
+    src: url("fonts/engravers-old-english.woff2") format("woff2"),
+        url("fonts/engravers-old-english.woff") format("woff"),
+        url("fonts/engravers-old-english.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Chunk Five";
+    src: url("fonts/chunk-master/Chunk.ttf") format("truetype"),
+        url("fonts/chunk-master/Chunk.woff") format("woff"),
+        url("fonts/chunk-master/Chunk.woff2") format("woff2");
+}
+
+.fotoCirculo {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+    border-radius: 50%;
+    padding-bottom: 5%;
+
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: row; /* Colocar elementos lado a lado en pantallas grandes */
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.columna-izquierda {
+    width: 30%; /* Tamaño de la columna izquierda en pantallas grandes */
+}
+
+.columna-derecha {
+    width: 70%;
+    padding-left: 2%; /* Tamaño del contenido en pantallas grandes */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* Media query para pantallas pequeñas (como celulares) */
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column; /* Cambiar las columnas a apilarse verticalmente */
+    }
+    .columna-izquierda, .columna-derecha {
+        width: 100%; /* Ambas columnas ocupan el 100% del ancho en pantallas pequeñas */
+    }
+}
+
+/* =======  Countdown style  ======= */
+#countdown {
+    text-align: center;
+}
+
+#countdown .section-head {
+    margin-bottom: 15px;
+    z-index: 1;
+}
+
+#countdown .section-head span {
+    display: block;
+    position: relative;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+#countdown .section-head h2 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 60px;
+    margin-bottom: 0px;
+    font-family: "Alex Brush", cursive;
+}
+
+#countdown .section-head h6 {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: 'Didact Gothic', sans-serif;
+    margin-bottom: 10px;
+}
+
+#countdown .section-head p {
+    color: #FFF;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+#countdown ul {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+#countdown li {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    display: inline-block;
+    font-size: 12px;
+    list-style-type: none;
+    padding: 15px;
+    color: #fff;
+    line-height: 4em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+#countdown li span {
+    display: block;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 70px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -1px;
+}
+
+@media all and (max-width: 768px) {
+    #countdown li {
+        font-size: 12px;
+        padding: 15px;
+    }
+
+    #countdown li span {
+        font-size: 60px;
+    }
+}
+
+.nosCasaremos {
+    background-position: 50%;
+    background-image: url('images/Foto_nos_casamos_en.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hemosReservado{
+    padding: 10%;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    align-content: center;
+}
+
+/* =======  Banner style  ======= */
+
+@media all and (max-width: 768px) {
+    #banner .section-head h2 {
+        font-size: 40px;
+        padding: 15px;
+    }
+}
+
+
+#banner {
+    text-align: center;
+
+}
+
+#banner .section-head {
+    margin-bottom: 100px;
+    z-index: 1;
+}
+
+#banner .section-head h2 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 60px;
+    margin-bottom: 0px;
+    line-height: 1em;
+    margin-top: 100px;
+    font-family: "Alex Brush", cursive;
+}
+
+@media all and (max-width: 768px) {
+    #banner .section-head h2 {
+        font-size: 40px;
+        padding: 15px;
+
+    }
+
+}
+
+#banner .section-head h6 {
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: 'Didact Gothic', sans-serif;
+    margin-bottom: 10px;
+}
+
+#banner .section-head h1 {
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Didact Gothic', sans-serif;
+    margin-bottom: 20px;
+}
+
+#banner .section-head p {
+    color: #FFF;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+
+
+
+.sesion img {
+    width: 80%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+    padding-bottom: 5%;
+    text-align: center;
+    font-family: serif;
+}
+
+
+.when-where .img {
+    position: relative;
+    overflow: hidden;
+}
+
+.when-where .img:hover img {
+    -webkit-filter: none;
+    filter: none;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.when-where .img img {
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    width: 80%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.when-where .content {
+    width: 100%;
+    padding: 30px 45px;
+}
+
+.when-where .content .date {
+    display: table-cell;
+    position: relative;
+    width: 80px;
+    z-index: 2;
+}
+
+.when-where .content .date h3 {
+    font-size: 75px;
+    font-weight: 600;
+    color: #b08c3e;
+    margin-bottom: 0px;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.when-where .content .date h6 {
+    color: #666;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-family: 'Didact Gothic', sans-serif;
+    text-transform: uppercase;
+}
+
+.when-where .content .cont {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 30px;
+}
+
+.when-where .content .cont h4 {
+    font-size: 40px;
+    color: #1b1b1b;
+    font-family: 'Alex Brush', cursive;
+    margin-bottom: 10px;
+}
+
+.when-where .content .cont .cont-list {
+    position: relative;
+    display: block;
+}
+
+.when-where .content .cont .cont-list li {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.when-where .content .cont .cont-list li+li {
+    margin-top: 5px;
+}
+
+.when-where .content .cont .cont-list li .icon span {
+    font-size: 16px;
+    color: #b08c3e;
+}
+
+.when-where .content .cont .cont-list li .text {
+    margin-left: 20px;
+}
+
+.when-where .content .cont .cont-list li .text p {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+}
+
+.when-where .content .cont .cont-list li .text p a {
+    font-size: 16px;
+    color: #666;
+    transition: all 500ms ease;
+}
+
+.when-where .content .cont .cont-list li .text p a:hover {
+    color: #b08c3e;
+}
+
+.when-where .content .cont p {
+    margin-bottom: 10px;
+}
+
+.when-where .content .cont p i {
+    color: #b08c3e;
+    font-size: 16px;
+    margin-right: 5px;
+
+}
+
+.when-where .content .cont .more {
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #b08c3e;
+    padding-left: 40px;
+    position: relative;
+}
+
+.when-where .content .cont .more:after {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: #b08c3e;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+}
+
+.when-where .content .cont .more:hover {
+    color: #1b1b1b;
+}
+
+.when-where .content .info h6 {
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #b08c3e;
+    font-family: 'Didact Gothic', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.when-where .content .info .tags {
+    color: #b08c3e;
+}
+
+@media screen and (max-width: 991px) {
+    .when-where .content {
+        padding: 0 30px;
+        margin-top: 40px;
+    }
+
+    .when-where .content .cont h4 {
+        line-height: 1em;
+        font-size: 36px;
+    }
+
+    .order2 {
+        -webkit-box-ordinal-group: 3 !important;
+        -ms-flex-order: 2 !important;
+        order: 2 !important;
+    }
+
+    .order1 {
+        -webkit-box-ordinal-group: 2 !important;
+        -ms-flex-order: 1 !important;
+        order: 1 !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .when-where .content {
+        padding: 0 15px;
+    }
+
+    .when-where .content .date {
+        width: 60px;
+    }
+
+    .when-where .content .info .tags {
+        margin: 5px 0 0;
+    }
+
+    .when-where .content .date h3 {
+        font-size: 40px;
+    }
+}
+
+.rsvp{
+    width: 100%;
+    padding: 15%;
+    
+}
+
+.rsvp h2 {
+    color: #1b1b1b;
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.rsvp h6 {
+    display: block;
+    color: #b08c3e;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Didact Gothic', sans-serif;
+    margin-bottom: 30px;
+}
+
+
+.sesion {
+    float: left;
+}
+
+.sesion h3 {
+    font-family: "Alex Brush", cursive;
+    font-size: 50px;
+}
+
+.section-subtitle {
+    display: block;
+    color: #000000;
+    font-size: 50px;
+    font-weight: 400;
+    font-family: "Alex Brush", cursive;
+    margin-bottom: 10px;
+    padding-top: 3%;
+}
+
+
+.section-padding {
+    clear: both;
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: auto;
+}
+
+.bg-fixed {
+    background-attachment: local;
+}
+
+.bg-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.section-title {
+    color: #1b1b1b;
+    font-family: 'Alex Brush', cursive;
+    font-weight: 400;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.gift-registry {
+   border-style: double;
+    padding-top: 10px;
+}
+.gift-registry h2 {
+    margin-bottom: 10px;
+}
+.gift-registry h6 {
+    color: #b08c3e;
+}
+.gift-registry a {
+    color: #666;
+}
+.gift-registry .owl-carousel {
+    margin: 30px 0;
+}
+.gift-registry .gift-registry-logo {
+    opacity: 1;
+    line-height: 0;
+}
+.gift-registry .gift-registry-logo:hover {
+    opacity: 1;
+}
+.gift-registry img:hover {
+    -webkit-filter: none;
+    filter: none;
+}
+.gift-registry img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+
+/* =======  Footer style  ======= */
+#footer {
+    background: #1b1b1b;
+}
+/* top footer */
+.top-footer {
+    padding: 120px 0 0 0;
+}
+.top-footer h2 {
+    font-size: 60px;
+    display: block;
+    width: 100%;
+    position: relative;
+    color: #fff;
+    letter-spacing: 0px;
+    margin-bottom: 10px;
+}
+.top-footer h6 {
+    font-family: 'Didact Gothic', sans-serif;
+    color: #fff;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 12px;
+}
+/* sub footer */
+.sub-footer {
+    padding: 30px 0 10px 0;
+    border-top: 1px solid rgba(255,255,255,0.03);
+}
+.sub-footer p {
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 14px;
+    color: #666;
+}
+.sub-footer p a:hover {
+    color: #b08c3e;
+}
